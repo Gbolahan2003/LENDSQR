@@ -1,0 +1,81 @@
+.sidebar-main-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 19rem;
+    padding-top: 2rem;
+    background: #FFF;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+    .toggle-settings{
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+            color: #213F7D;
+font-family: 'Work Sans' sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 2rem;
+   
+    }
+    .toggle-settings:hover{
+        cursor: pointer;
+    }
+    .dashboard-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .dashboard-text{
+            margin-left: 2.6rem;
+            display: flex;
+            // justify-content: center;
+          
+            align-items: center;
+            gap: 1rem;
+            color: #213F7D;
+
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 1.4rem;
+        }
+        .customer{
+            margin-left: 2.6rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+            color: #545F7D;
+font-family: 'Open Sans' sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+        }
+        .dashboard-children{
+            display: flex;
+            flex-direction: column;
+            .dash-con{
+                display: flex;
+                padding: 0.7rem 3.4rem;
+                gap: 1rem;
+                align-items: center;
+                color: #213F7D;
+font-family: 'Work Sans', sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+transition: all 0.2s;
+            }
+            .dash-con:hover, .active-bar{
+                cursor: pointer;
+                opacity: 0.4;
+                border-left: 3px solid  #008686;
+              
+background: #39CDCC;
+            }
+        }
+    }
+}
