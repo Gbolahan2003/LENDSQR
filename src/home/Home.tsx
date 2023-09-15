@@ -3,11 +3,21 @@ import Navbar from '../Components/Navbar'
 import Example from '../Sidebar/Sidebar'
 import Sidebar from '../Sidebar/Sidebar'
 import { UserContainer } from '../Users/UserContainer'
-
+import {motion} from 'framer-motion'
 
 const Home = () => {
   return (
-    <div>
+    <motion.div
+    className="box"
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{
+      duration: 1,
+      delay: 0.5,
+      ease: [0, 0.71, 0.2, 1.01],
+    }}
+      >
+          <div>
        <Navbar/>
        <div className="main-container">
        <Sidebar/>
@@ -16,6 +26,8 @@ const Home = () => {
        </div>
        </div>
     </div>
+      </motion.div>
+  
   )
 }
 
