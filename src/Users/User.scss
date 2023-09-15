@@ -173,24 +173,14 @@ border-bottom: none;
     }
 
 }
-.pagination-container{
-margin-top: 1.5rem;
-display: flex;
-justify-content: space-between;
-}
 
-.count{
-display: flex;
-align-items: center;
-gap: 0.5rem;
-.out-con{
-    display: flex;
-    border-radius: 4px;
-    padding: 0.3rem 0.6rem;
-background: rgba(33, 63, 125, 0.10);
-gap: 0.5rem;
-}
-}
+// margin-top: 1.5rem;
+// display: flex;
+// justify-content: space-between;
+
+    
+
+
 
 .details-main-container{
     display: flex;
@@ -222,4 +212,23 @@ line-height: normal;
         background-color: rgb(84, 95, 125, 0.1);
     }
 }
+}
+
+.pagination-con{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .counting{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        .out-con{
+            display: flex;
+            border-radius: 4px;
+            padding: 0.3rem 0.6rem;
+        background: rgba(33, 63, 125, 0.10);
+        gap: 0.5rem;
+        }
+        }
 }
