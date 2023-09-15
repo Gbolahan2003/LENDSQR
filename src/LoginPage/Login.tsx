@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import './Login.scss'
-import {NavLink, useNavigate} from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 import loginImage from '../images/loginImage.svg'
 import { useAuth } from '../Components/Auth'
-
+import {motion} from 'framer-motion'
 
 
 const Login:React.FC = () => {
@@ -33,6 +33,17 @@ const Login:React.FC = () => {
         }
       };
   return  (
+    <motion.div
+    className="box"
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{
+      duration: 1,
+      delay: 0.5,
+      ease: [0, 0.71, 0.2, 1.01],
+    }}
+      >
+
     <div>
         <div className="login-container">
             <header>
@@ -81,6 +92,7 @@ const Login:React.FC = () => {
             </div>
         </div>
     </div>
+      </motion.div>
   )
 }
 

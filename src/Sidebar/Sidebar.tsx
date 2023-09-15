@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import './Sidebar.scss'
-import Button from 'react-bootstrap/Button';
+
 import Collapse from 'react-bootstrap/Collapse';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const Sidebar = () => {

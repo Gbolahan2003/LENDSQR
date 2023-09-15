@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import Login from './LoginPage/Login';
 import {Routes, Route} from 'react-router-dom'
 import {AuthProvider} from './Components/Auth';
 import Home from './home/Home';
 import UserDetails from './Userdetails/UserDetails';
-import UserDetailsContainer from './Userdetails/UserDetailsContainer';
+
 import { AnimatePresence } from "framer-motion";
 import {User} from './UserInterface';
 function App() {

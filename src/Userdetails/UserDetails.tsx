@@ -5,6 +5,8 @@ import './UserDetails.scss'
 import { Button } from '@mui/material';
 import {User} from '../UserInterface';
 import {motion} from 'framer-motion'
+import Navbar from '../Components/Navbar';
+import Sidebar from '../Sidebar/Sidebar';
 
 
 interface UserDetailsProps {
@@ -242,7 +244,12 @@ const UserDetails: React.FC<UserDetailsProps> = ({ users }) => {
       ease: [0, 0.71, 0.2, 1.01],
     }}
       >
-          <div className='user-details-container'>
+         <div className="">
+            <Navbar/>
+         <div className="flexed">
+            <div className="side-bar"><Sidebar/></div>
+            <div className="flexed-users">
+            <div className='user-details-container'>
               <NavLink to={'/home'} className="back-function">
                   <div className="back-text-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
@@ -267,6 +274,9 @@ const UserDetails: React.FC<UserDetailsProps> = ({ users }) => {
               
       
           </div>
+            </div>
+         </div>
+         </div>
       </motion.div>
         );
 };

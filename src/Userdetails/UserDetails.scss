@@ -1,4 +1,8 @@
+.flexed{
+    display: flex;
+}
 .user-details-container{
+    width: 72vw;
     margin: 3rem;
     .back-function{
 text-decoration: none;
@@ -10,7 +14,11 @@ text-decoration: none;
 font-size: 1rem;
 font-style: normal;
 font-weight: 400;
-line-height: normal;
+line-height: normal;transition: all 0.3s;
+    }
+    .back-function:hover{
+        opacity: 0.5;
+      
     }
     .user-detail-header{
         margin: 2rem 0;

@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
-import Example from '../Sidebar/Sidebar'
+
 import Sidebar from '../Sidebar/Sidebar'
 import { UserContainer } from '../Users/UserContainer'
 import {motion} from 'framer-motion'
