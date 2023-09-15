@@ -9,7 +9,7 @@ import {motion} from 'framer-motion'
 const Login:React.FC = () => {
     const auth = useAuth()
     const [user, setUser] = useState('') 
-    const [password, setPassword] = useState("");
+    // const [password, setPassword] = useState("");
 
 
     const navigate = useNavigate()
