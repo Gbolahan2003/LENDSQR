@@ -45,6 +45,7 @@ const UserDetails: React.FC<UserDetailsProps> = ({ users }) => {
 
   // user card component
   const UserCard = ()=>{
+    const amount = `${(user.money*2).toString().slice(0, 3)}, ${user.money.toString().slice(4, 7)}.00`
     return(
         <div className="user-card-component">
             <div className="personal-info">
@@ -54,7 +55,7 @@ const UserDetails: React.FC<UserDetailsProps> = ({ users }) => {
 </svg></div>
                 <div className="profile-bio">
                     <div className="bio-name">{user.name}</div>
-                    <div className="bio-id">LSQFf587g90</div>
+                    <div className="bio-id">{user.guid.slice(0,8)}{user.guid.slice(11,13)}</div>
                 </div>
                 <div className="line"></div>
                 <div className="user-stars">
@@ -86,8 +87,8 @@ const UserDetails: React.FC<UserDetailsProps> = ({ users }) => {
                 </div>
                 <div className="line"></div>
                 <div className="amount">
-              <div className="amount-cash">  ₦200,000.00</div>
-              <div className="bank-name">{`${user.AccountNumber}`}\{user.Bank}</div>
+              <div className="amount-cash">  ₦{amount}</div>
+              <div className="bank-name">{`${user.AccountNumber.toString().slice(0, 10)}1`}\{user.Bank}</div>
                 </div>
                 </div>
             </div>
@@ -120,7 +121,7 @@ const UserDetails: React.FC<UserDetailsProps> = ({ users }) => {
                             <td>{user.name}</td>
                             <td>{user.phone}</td>
                             <td>{user.email}</td>
-                            <td>{user.BVN}</td>
+                            <td>{user.BVN.toString().slice(0, 9)}</td>
                             <td>{user.gender}</td>
                         </tr>
                     </table>
@@ -165,8 +166,8 @@ const UserDetails: React.FC<UserDetailsProps> = ({ users }) => {
                         </tr>
                         <tr>
                             <td>{user.email}</td>
-                            <td>₦{user.money *2}.00 - {user.money *4}.00</td>
-                            <td> ₦{user.Loans * 10}.00</td>
+                            <td>{`₦${(user.money*2).toString().slice(0, 3)},${user.money.toString().slice(4, 7)}.00`} - { `₦ ${(user.money*3).toString().slice(0, 3)},${user.money.toString().slice(4, 7)}.00`}</td>
+                            <td> ₦{`${(user.money*2).toString().slice(0, 3)},${user.money.toString().slice(4, 7)}.00`}</td>
                         </tr>
                     </table>
                 </div>
@@ -240,7 +241,7 @@ const UserDetails: React.FC<UserDetailsProps> = ({ users }) => {
     animate={{ opacity: 1, scale: 1 }}
     transition={{
       duration: 1,
-      delay: 0.5,
+      delay: 0.2,
       ease: [0, 0.71, 0.2, 1.01],
     }}
       >
