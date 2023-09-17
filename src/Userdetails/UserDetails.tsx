@@ -313,7 +313,7 @@ const Tiers: React.FC<{ Tier: any }> = ({ Tier }) => {
             <Navbar/>
          <div className="flexed">
             <div className="side-bar"><Sidebar/></div>
-            <div className="flexed-users">
+            <div className="flexed-users" style={{height:'70vw', overflowY:'scroll'}}>
             <div className='user-details-container'>
               <NavLink to={'/home'} className="back-function">
                   <div className="back-text-icon">

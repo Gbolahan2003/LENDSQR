@@ -18,13 +18,6 @@ export const UserContainer = () => {
   };
 
   // pagination component
-   const  PaginationControlled:React.FC=()=> {
-    return (
-      <Stack spacing={2}>
-        <Pagination count={51} page={page} shape='rounded' onChange={handleChange} />
-      </Stack>
-    );
-  }
 
 
   //  table component 
@@ -43,9 +36,14 @@ interface userProps {
     const [filteredData, setFilteredData] = useState([]);
     const [organization, setOrganization] = useState('');
     const [username, setUsername] = useState('');
+    const [ userEmail, setUserEmail] = useState('')
     const [date, setDate] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [statusfilter, setStatusfilter] = useState('');
+    const [style, setStyle] = useState({})
+    const visibility = {
+      visibility:'hidden'
+    }
     React.useEffect(() => {
       const fetchData = async () => {
         try {
@@ -81,6 +79,7 @@ interface userProps {
       date: string,
       phone: string,
       status: string,
+      email:string
     };
     
     React.useEffect(() => {
@@ -90,6 +89,7 @@ interface userProps {
         const organizationMatch = organization === '' || item.organization.includes(organization);
         const usernameMatch = username === '' || item.name.includes(username);
         const dateMatch = date === '' || item.date.includes(date);
+        const EmailMatch = userEmail=== '' || item.email.includes(userEmail)
         const phoneNumberMatch = phoneNumber === '' || item.phone.includes(phoneNumber);
         const statusMatch = statusfilter === '' || item.status === statusfilter;
     
@@ -99,30 +99,42 @@ interface userProps {
           usernameMatch &&
           dateMatch &&
           phoneNumberMatch &&
-          statusMatch
+          statusMatch && EmailMatch
         );
       });
     
       // Update the filtered data state
       setFilteredData(filtered);
-    }, [data, organization, username, date, phoneNumber, statusfilter]);
+    }, [data, organization, username, date, phoneNumber, statusfilter, userEmail]);
     
 
    
       const HandleFilterClick = () => {
+       
+        const handleSubmit =(e:any)=> {
+          e.preventDefault()
+        //  setOrganization(e.target.value)
+         setStatusfilter(e.target.value)
+          // return statusfilter
 
+        }
+        const resetFilter = ()=>{
+          setStatusfilter(()=> '')
+          setOrganization(()=> '')
+          setPhoneNumber(()=> '')
+          setUserEmail(()=> '')
+          setUsername(()=> '')
+          
+        }
       return(
         <>
           <div className="filter-main-container">
-            <div className="filter-options-container">
-              <div className="filter-opttions">
-                <label className="label"></label>
-                <select name="" id=""></select>
-              </div>
+            <form  className="filter-options-container">
               <div className="filter-opttions">
                 <label className="label">Organization</label>
-                <input value={organization} onChange={e => setOrganization(e.target.value)} type='text' id=""></input>
+                <select value={organization}  onChange={handleSubmit} name="" id=""></select>
               </div>
+        
               <div className="filter-opttions">
                 <label className="label">Username</label>
                 <input  value={username}
@@ -130,14 +142,14 @@ interface userProps {
                 
               </div>
               <div className="filter-opttions">
-                <label className="label">email</label>
-                <input  type='email' id=""></input>
+                <label className="label">Email</label>
+                <input value={userEmail} onChange={(e)=> setUserEmail(e.target.value)}  type='email' id=""></input>
                 
               </div>
               <div className="filter-opttions">
                 <label className="label">Date</label>
-                <input type="date" name="" id="" value={date}
-              onChange={(e) => setDate(e.target.value)}
+                <input type="date" name="" id="" 
+  
   aria-placeholder='date' placeholder='date'/>
              
               </div>
@@ -149,7 +161,7 @@ interface userProps {
               <div className="filter-opttions">
                 <label className="label">Status</label>
            <select     value={statusfilter}
-              onChange={(e) => setStatusfilter(e.target.value)}>
+              onChange={handleSubmit}>
             <option value=""></option>
             <option value="Blacklist">Blacklist</option>
             <option value="Active">Active</option>
@@ -158,14 +170,15 @@ interface userProps {
            </select>
               </div>
               <div className="button-container">
-                <Button onClick={()=> console.log(username)
-                }>click</Button>
+                <button className='reset' onClick={resetFilter} type='submit'>Reset</button>
+                <button type='submit' className='filter'>filter</button>
               </div>
-            </div>
+            </form>
           </div>
         </>
       )
      }
+     
 
     const Newtable= filteredData.map((user:any)=>{
 
@@ -264,7 +277,6 @@ interface userProps {
       //main table
     return(
          <div className="">
-  <HandleFilterClick/>
           <div className="the-table">
           <table>
               <tr className='table-header-pro'>
@@ -274,6 +286,9 @@ interface userProps {
                       <div className="th"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
     <path d="M6.22222 13.3333H9.77778V11.5555H6.22222V13.3333ZM0 2.66666V4.44443H16V2.66666H0ZM2.66667 8.88888H13.3333V7.1111H2.66667V8.88888Z" fill="#545F7D"/>
   </svg></div>
+                </div>
+                <div className="handle-click-container" style={style}>
+                  <HandleFilterClick/>
                 </div>
                   </th>
                   <th className='name'>
@@ -315,12 +330,21 @@ interface userProps {
             
           </table>
           </div>
+  
          </div>
       )
   
 }
   // shows the number of users per pages 
   const Pagi:React.FC=()=>{
+    const  PaginationControlled:React.FC=()=> {
+      return (
+        <Stack spacing={2}>
+          <Pagination count={51} page={page} shape='rounded' onChange={handleChange} />
+        </Stack>
+      );
+    }
+  
     return(
       <section className="pagination-con">
      <div className="counting">
