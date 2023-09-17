@@ -9,13 +9,13 @@ import {motion} from 'framer-motion'
 const Login:React.FC = () => {
     const auth = useAuth()
     const [user, setUser] = useState('') 
-    // const [password, setPassword] = useState("");
-
+   
 
     const navigate = useNavigate()
 
+    //user property
     type User = {
-        // Define your user properties here
+    
         id: string;
         username: string;
       };

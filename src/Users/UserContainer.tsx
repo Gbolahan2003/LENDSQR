@@ -94,11 +94,11 @@ interface userProps {
         return (
           organizationMatch &&
           usernameMatch &&
-          
           phoneNumberMatch &&
           statusMatch && EmailMatch
         );
       });
+      
     
       // Update the filtered data state
       setFilteredData(filtered);
@@ -174,7 +174,7 @@ interface userProps {
               </div>
               <div className="button-container">
                 <button className='reset' onClick={resetFilter} type='submit'>Reset</button>
-                <button type='submit' className='filter'>Rilter</button>
+                <button type='submit' className='filter'>Filter</button>
               </div>
             </form>
           </div>
