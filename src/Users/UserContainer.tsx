@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import './User.scss'
 import { Card } from './Card'
-import { Button } from '@mui/material';
+
 export const UserContainer = () => {
   const [page, setPage] = React.useState(1);
   const itemsPerPage = 10; // Number of items to display per page
@@ -37,13 +37,10 @@ interface userProps {
     const [organization, setOrganization] = useState('');
     const [username, setUsername] = useState('');
     const [ userEmail, setUserEmail] = useState('')
-    const [date, setDate] = useState('');
+  
     const [phoneNumber, setPhoneNumber] = useState('');
     const [statusfilter, setStatusfilter] = useState('');
-    const [style, setStyle] = useState({})
-    const visibility = {
-      visibility:'hidden'
-    }
+
     React.useEffect(() => {
       const fetchData = async () => {
         try {
@@ -88,7 +85,7 @@ interface userProps {
       const filtered = Page.filter((item:filter) => {
         const organizationMatch = organization === '' || item.organization.includes(organization);
         const usernameMatch = username === '' || item.name.includes(username);
-        const dateMatch = date === '' || item.date.includes(date);
+        // const dateMatch = date === '' || item.date.includes(date);
         const EmailMatch = userEmail=== '' || item.email.includes(userEmail)
         const phoneNumberMatch = phoneNumber === '' || item.phone.includes(phoneNumber);
         const statusMatch = statusfilter === '' || item.status === statusfilter;
@@ -97,7 +94,7 @@ interface userProps {
         return (
           organizationMatch &&
           usernameMatch &&
-          dateMatch &&
+          
           phoneNumberMatch &&
           statusMatch && EmailMatch
         );
@@ -105,7 +102,7 @@ interface userProps {
     
       // Update the filtered data state
       setFilteredData(filtered);
-    }, [data, organization, username, date, phoneNumber, statusfilter, userEmail]);
+    }, [data, organization, username, phoneNumber, statusfilter, userEmail]);
     
 
    
@@ -287,7 +284,7 @@ interface userProps {
     <path d="M6.22222 13.3333H9.77778V11.5555H6.22222V13.3333ZM0 2.66666V4.44443H16V2.66666H0ZM2.66667 8.88888H13.3333V7.1111H2.66667V8.88888Z" fill="#545F7D"/>
   </svg></div>
                 </div>
-                <div className="handle-click-container" style={style}>
+                <div className="handle-click-container">
                   <HandleFilterClick/>
                 </div>
                   </th>
