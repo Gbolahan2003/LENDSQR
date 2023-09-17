@@ -34,6 +34,11 @@ font-size: 1.2rem;
         background-color: #39CDCC;
     }
 }
+.nav-bar-icon{
+    font-size: 3rem;
+    display: none;
+    align-items: center;
+}
 nav{
     margin-left: 13rem;
     
@@ -60,4 +65,34 @@ text-decoration-line: underline;
         }
     }
 }
+
+
+}
+
+@media(max-width:765px){
+    .navbar-container nav {
+        margin-left: 13rem;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+    }
+  .navbar-container .nav-bar-icon{
+    display: flex;
+  }
+}
+@media(max-width:500px){
+    .navbar-container .input-box .navbar-input {
+        border-radius: 8px;
+        border: 1px solid #213F7D;
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0%;
+        opacity: 0.2;
+        background: #FFF;
+        height: 3rem;
+        width: 10rem;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+    }
 }

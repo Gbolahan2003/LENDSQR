@@ -79,3 +79,56 @@ background: #39CDCC;
         }
     }
 }
+@media(max-width:800px){
+    .sidebar-main-container .dashboard-container .customer {
+        margin-left: 2.6rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        color: #545F7D;
+        font-family: "Open Sans" sans-serif;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .sidebar-main-container .dashboard-container .dashboard-children .dash-con {
+        display: flex;
+        padding: 0.7rem 3.4rem;
+        gap: 1rem;
+        align-items: center;
+        color: #213F7D;
+        font-family: "Work Sans", sans-serif;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: all 0.2s;
+    }
+    .sidebar-main-container .toggle-settings {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        color: #213F7D;
+        font-family: "Work Sans" sans-serif;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 2rem;
+    }
+    .sidebar-main-container .dashboard-container .dashboard-text {
+        margin-left: 2.6rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: #213F7D;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 1.4rem;
+    }
+    
+    
+}

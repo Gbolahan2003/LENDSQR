@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/navbar.scss'
 import userImage from '../images/userImage.png'
 import {AiOutlineSearch} from 'react-icons/ai'
+import {IoReorderThree} from 'react-icons/io5'
 const Navbar = () => {
   return (
     <div>
@@ -42,6 +43,9 @@ const Navbar = () => {
 </svg>
                 </div>
             </nav>
+                <div className="nav-bar-icon">
+                  <IoReorderThree/>
+                </div>
         </div>
     </div>
   )

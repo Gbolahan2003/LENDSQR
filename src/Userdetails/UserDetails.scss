@@ -2,7 +2,7 @@
     display: flex;
 }
 .user-details-container{
-    width: 72vw;
+    // width: 72vw;
     margin: 3rem;
     .back-function{
 text-decoration: none;
@@ -264,5 +264,100 @@ line-height: normal;
         
     }
 
+}
+}
+@media  (max-width:1124px) {
+   
+    .user-home-container{
+      
+      height: auto;
+      overflow-x: scroll;
+    }
+    .user-card-component .personal-info .profile-container .profile-bio .bio-name {
+        color: #213F7D;
+        font-family: Work Sans;
+        font-style: normal;
+        font-size: 1.1rem;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+
+@media(max-width:850px){
+    .personal-details-container .information-personal .personal-table td {
+        color: #545F7D;
+        font-family: Work Sans;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .user-card-component .user-detail-links .links {
+        height: 2rem;
+       width: auto;
+        transition: all 0.2s;
+    }
+    .user-card-component .personal-info .profile-container .amount .amount-cash {
+        color: #213F7D;
+        font-family: Work Sans;
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+@media(max-width:700px){
+    .user-details-container{
+        width: 96vw;
+        overflow-x: scroll;
+    }
+    .user-details-container .user-header-button_container .blacklist-button {
+        color: #E4033B;
+        text-align: center;
+        font-family: Work Sans;
+        font-style: normal;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        border-radius: 8px;
+        padding: 0.7rem 1.1rem;
+        border: 1px solid #E4033B;
+        transition: all 0.3s;
+    }
+    .user-details-container .user-header-button_container .activate-button {
+        color: #39CDCC;
+        text-align: center;
+        font-family: Work Sans;
+        font-size: 1rem;
+        padding: 0.7rem 1.1rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        border-radius: 8px;
+        border: 1px solid #39CDCC;
+        transition: all 0.3s;
+    }
+}
+@media(max-width:400px){
+    .user-details-container{
+        width: 100vw;
+        overflow-x: scroll;
+    }
+    
+
+.user-card-component .user-detail-links {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-family: "Work Sans", sans-serif;
+    font-style: normal;
+    gap: 0.3rem;
+    /* font-weight: 400; */
+    line-height: normal;
 }
 }

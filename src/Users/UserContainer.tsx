@@ -31,7 +31,7 @@ interface userProps {
 
 }
   const Table:React.FC<any|null|void> =()=>{
-    const url = 'https://run.mocky.io/v3/afbe6ec2-cae7-48e7-8d7f-8e2a4376c3c2';
+    const url = 'https://run.mocky.io/v3/42687199-64ae-4f4d-ba9d-5ab0196bfcce';
     const [data, setData] = useState([])
     const [filteredData, setFilteredData] = useState([]);
     const [organization, setOrganization] = useState('');
@@ -129,37 +129,43 @@ interface userProps {
             <form  className="filter-options-container">
               <div className="filter-opttions">
                 <label className="label">Organization</label>
-                <select value={organization}  onChange={handleSubmit} name="" id=""></select>
+                <select value={organization}  onChange={e =>setOrganization(e.target.value)} name="" id="">
+                  <option value='' >Select</option>
+                  <option value="Amazon">Amazon</option>
+                  <option value="Lendsqr">Lendsqr</option>
+                  <option value="Irorun">Irorun</option>
+                  <option value="Lendstar">Lendstar</option>
+                </select>
               </div>
         
               <div className="filter-opttions">
                 <label className="label">Username</label>
-                <input  value={username}
+                <input placeholder='username' value={username}
               onChange={(e) => setUsername(e.target.value)} type='text' id=""></input>
                 
               </div>
               <div className="filter-opttions">
                 <label className="label">Email</label>
-                <input value={userEmail} onChange={(e)=> setUserEmail(e.target.value)}  type='email' id=""></input>
+                <input placeholder='Email' value={userEmail} onChange={(e)=> setUserEmail(e.target.value)}  type='email' id=""></input>
                 
               </div>
               <div className="filter-opttions">
                 <label className="label">Date</label>
-                <input type="date" name="" id="" 
+                <input  type="date" name="" id="" 
   
-  aria-placeholder='date' placeholder='date'/>
+  aria-placeholder='Date' placeholder='date'/>
              
               </div>
               <div className="filter-opttions">
                 <label className="label">Phone Number</label>
-             <input value={phoneNumber}
+             <input value={phoneNumber} placeholder='Phone Number'
               onChange={(e) => setPhoneNumber(e.target.value)} type='text'/>
               </div>
               <div className="filter-opttions">
                 <label className="label">Status</label>
            <select     value={statusfilter}
               onChange={handleSubmit}>
-            <option value=""></option>
+            <option value="">Select</option>
             <option value="Blacklist">Blacklist</option>
             <option value="Active">Active</option>
             <option value="Inactive">Inactive</option>
@@ -168,7 +174,7 @@ interface userProps {
               </div>
               <div className="button-container">
                 <button className='reset' onClick={resetFilter} type='submit'>Reset</button>
-                <button type='submit' className='filter'>filter</button>
+                <button type='submit' className='filter'>Rilter</button>
               </div>
             </form>
           </div>

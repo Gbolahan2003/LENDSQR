@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
-
+import '../../src/styles/media.scss'
 import Sidebar from '../Sidebar/Sidebar'
 import { UserContainer } from '../Users/UserContainer'
 import {motion} from 'framer-motion'

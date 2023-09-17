@@ -76,3 +76,13 @@ transition: all 0.3s;
     }
 }
 }
+
+@media(max-width:600px){
+    .login-container{.svg{
+        width: 30rem;
+    }}
+    img, svg {
+        width: 30rem;
+        vertical-align: middle;
+    }
+}

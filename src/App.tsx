@@ -15,7 +15,7 @@ function App() {
 
   React.useEffect(() => {
     // Fetch user data from your API here
-    const url = 'https://run.mocky.io/v3/afbe6ec2-cae7-48e7-8d7f-8e2a4376c3c2';
+    const url = 'https://run.mocky.io/v3/42687199-64ae-4f4d-ba9d-5ab0196bfcce';
     fetch(url)
       .then((response) => response.json())
       .then((data) => setUsers(data))
