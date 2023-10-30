@@ -82,17 +82,3 @@ text-decoration-line: underline;
     display: flex;
   }
 }
-@media(max-width:500px){
-    .navbar-container .input-box .navbar-input {
-        border-radius: 8px;
-        border: 1px solid #213F7D;
-        border-top-right-radius: 0%;
-        border-bottom-right-radius: 0%;
-        opacity: 0.2;
-        background: #FFF;
-        height: 3rem;
-        width: 10rem;
-        padding: 0.5rem 1rem;
-        font-size: 1.2rem;
-    }
-}

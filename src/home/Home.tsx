@@ -21,7 +21,7 @@ const Home = () => {
        <Navbar/>
        <div className="main-container">
        <Sidebar/>
-       <div className="user-home-container" >
+       <div className="user-home-container" style={{height:'90vw', overflowY:'scroll'}} >
        <UserContainer/>
        </div>
        </div>
